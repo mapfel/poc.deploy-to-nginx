@@ -22,9 +22,10 @@ jobs:
       - name: copy file via ssh password
         uses: appleboy/scp-action@master
         with:
-          host: 37.120.168.244
           username: root
-          password: HTP5PTpEQsHwHNE
-          # source: web-artifacts.zip
+          # host: 37.120.168.244
+          # password: HTP5PTpEQsHwHNE
+          host: 185.183.159.67
+          password: 351mu8dUWhzd4Bk
           source: "deploy-to-nginx/*.*"
-          target: "/etc/nginx/sites-available/"
+          target: "/var/www/html/deploy-to-nginx"
