@@ -28,4 +28,4 @@ jobs:
           host: 185.183.159.67
           password: 351mu8dUWhzd4Bk
           source: "deploy-to-nginx/*.*"
-          target: "/var/www/html/deploy-to-nginx"
+          target: "/var/www/html"
