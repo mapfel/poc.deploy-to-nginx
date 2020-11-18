@@ -9,9 +9,14 @@ jobs:
       - name: Upload content
         uses: actions/upload-artifact@v2
         with:
-          name: web-artifacts
+          name: deploy-to-nginx
           path: www
           retention-days: 1
+
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: deploy-to-nginx
 
       - name: copy file via ssh password
         uses: appleboy/scp-action@master
@@ -20,5 +25,5 @@ jobs:
           username: root
           password: HTP5PTpEQsHwHNE
           # source: web-artifacts.zip
-          source: www/*.*
-          target: "www"
+          source: deploy-to-nginx/*.*
+          target: "/etc/nginx/sites-available/"
