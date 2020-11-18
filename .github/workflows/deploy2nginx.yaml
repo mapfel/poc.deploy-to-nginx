@@ -25,5 +25,5 @@ jobs:
           username: root
           password: HTP5PTpEQsHwHNE
           # source: web-artifacts.zip
-          source: deploy-to-nginx/*.*
+          source: "deploy-to-nginx/*.*"
           target: "/etc/nginx/sites-available/"
