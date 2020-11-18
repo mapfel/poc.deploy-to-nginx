@@ -27,5 +27,6 @@ jobs:
           host: 37.120.168.244
           username: root
           password: HTP5PTpEQsHwHNE
-          source: web-artifacts
+          # source: web-artifacts.zip
+          source: www/*.*
           target: "www"
